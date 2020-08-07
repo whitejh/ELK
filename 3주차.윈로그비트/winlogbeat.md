@@ -15,7 +15,6 @@ c드라이브 안 Program Files 폴더 안에 Winlogbeat를 넣었다.
 여기서 경로 시작과 끝에 작은 따옴표(')를 붙여줘야했다.      
 
 **winlogbeat 설치**    
-![6](./image/6.PNG) 
 
 ## 2. Connect to the Elastic Stack   
 그 후 winlogbeat.yml 설정파일에 가서 설정을 변경 및 적용해야한다.   
@@ -34,12 +33,12 @@ hosts 에는 내 아이피 주소 192.168.78.129를 입력했다.
 
 ## 3. Configure Winlogbeat 
 원하는 로그 구성을 설정하고 logging할 옵션 설정 후 파워쉘에서 저장 및 test를 실행          
-```PS C:\Program Files\Winlogbeat> .\winlogbeat.exe test config -c .\winlogbeat.yml -e```     
+```PS C:\Program Files\Winlogbeat> .\winlogbeat.exe test config -c .\winlogbeat.yml -e```        
 ![5](./image/5.PNG) 
 
 ## 4. Start Winlogbeat    
 ```PS C:\Program Files\Winlogbeat> Start-Service winlogbeat```    
-![7](./image/7.PNG)       
+![7](./image/7.PNG)           
 해당 명령어는 winlogbeat 서비스를 시작하고   
 winlogbeat가 실행 중이고 로깅 설정을 사용한 경우
 C:\Program Files\Winlogbeat\Logs 위치에서 로그 파일을 볼 수 있다.<br>
@@ -72,3 +71,4 @@ kibana로 가서 index pattern을 보면 log가 올라오는 것을 알 수 있�
 로그가 출력된 것을 확인하여 필터링 과정으로 원하는 로그를 거르고    
 시각화를 통해 앞으로의 프로젝트에 사용될 몰입도 설정이 가능할 것으로 예상된다.        
 시간대는 우분투 시간과 일치한다.   
+djfkd
