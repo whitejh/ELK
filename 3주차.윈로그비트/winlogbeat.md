@@ -10,9 +10,10 @@ winlogbeat는 window에 설치하여 log를 ES와 Logstash에 전송한다.
 
 ![2](./image/2.PNG)     
 c드라이브 안 Program Files 폴더 안에 Winlogbeat를 넣었다.   
-![1](./image/1.PNG)   
+![1](./image/1.PNG)  
 관리자 권한으로 실행한 파워셀에 다운로드하고 압축을 푼 winlogbeat가 있는 경로를 먼저 입력한다.     
-여기서 경로 시작과 끝에 작은 따옴표(')를 붙여줘야했다.      
+여기서 경로 시작과 끝에 작은 따옴표(')를 붙여줘야했다.    
+![6](./image/6.PNG)       
 
 **winlogbeat 설치**    
 
