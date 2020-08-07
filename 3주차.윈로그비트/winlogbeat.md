@@ -10,10 +10,10 @@ winlogbeat는 window에 설치하여 log를 ES와 Logstash에 전송한다.
 
 ![2](./image/2.PNG)     
 c드라이브 안 Program Files 폴더 안에 Winlogbeat를 넣었다.   
-![1](./image/1.PNG)  
+![1](./image/1.png)  
 관리자 권한으로 실행한 파워셀에 다운로드하고 압축을 푼 winlogbeat가 있는 경로를 먼저 입력한다.     
 여기서 경로 시작과 끝에 작은 따옴표(')를 붙여줘야했다.    
-![6](./image/6.PNG)       
+![6](./image/6.png)       
 
 **winlogbeat 설치**    
 
@@ -35,11 +35,11 @@ hosts 에는 내 아이피 주소 192.168.78.129를 입력했다.
 ## 3. Configure Winlogbeat 
 원하는 로그 구성을 설정하고 logging할 옵션 설정 후 파워쉘에서 저장 및 test를 실행          
 ```PS C:\Program Files\Winlogbeat> .\winlogbeat.exe test config -c .\winlogbeat.yml -e```        
-![5](./image/5.PNG) 
+![5](./image/5.png) 
 
 ## 4. Start Winlogbeat    
 ```PS C:\Program Files\Winlogbeat> Start-Service winlogbeat```    
-![7](./image/7.PNG)           
+![7](./image/7.png)           
 해당 명령어는 winlogbeat 서비스를 시작하고   
 winlogbeat가 실행 중이고 로깅 설정을 사용한 경우
 C:\Program Files\Winlogbeat\Logs 위치에서 로그 파일을 볼 수 있다.<br>
@@ -58,7 +58,7 @@ elasticsearch에 실시간 저장 중이다.
 
 
 ## Sysmon 설치 및 실행
-![11](./image/11.PNG)    
+![11](./image/11.png)    
 ```설치 및 실행 : Sysmon64.exe -i sysmonconfig-export.xml```    
 Sysmon을 더 유용하게 사용하기 위해서 config 파일을 이용해야한다.        
 편하게 이미 github에 공개된 sysmonconfig-export.xml파일을 이용한다.       
@@ -67,9 +67,8 @@ Sysmon을 더 유용하게 사용하기 위해서 config 파일을 이용해야�
 ### kibana를 통한 확인
 ![12](./image/12.PNG)   
 kibana로 가서 index pattern을 보면 log가 올라오는 것을 알 수 있다.    
-![13](./image/13.PNG)     
+![13](./image/13.png)     
 이 시간대에 디스코드를 사용하고 있었는데 로그가 제대로 올라온 것처럼 보인다.    
 로그가 출력된 것을 확인하여 필터링 과정으로 원하는 로그를 거르고    
 시각화를 통해 앞으로의 프로젝트에 사용될 몰입도 설정이 가능할 것으로 예상된다.        
 시간대는 우분투 시간과 일치한다.   
-djfkd
